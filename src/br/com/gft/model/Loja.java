@@ -52,16 +52,26 @@ public class Loja {
 	}
 
 	public void listaLivros() {
-		for (int i = 0; i < livros.size(); i++) {
-			System.out.println("Titulo: " + livros.get(i).getNome() + ", preço: " + livros.get(i).getPreco()
-					+ ", quantidade: " + livros.get(i).getQtd() + " em estoque.");
+		if (livros.size() > 0) {
+			for (int i = 0; i < livros.size(); i++) {
+				System.out.println("Titulo: " + livros.get(i).getNome() + ", preço: " + livros.get(i).getPreco()
+						+ ", quantidade: " + livros.get(i).getQtd() + " em estoque.");
+			}
+		} else {
+			System.out.println("A loja não tem livros no seu estoque.");
 		}
+
 	}
 
 	public void listaVideoGames() {
-		for (int i = 0; i < videoGames.size(); i++) {
-			System.out.println("Titulo: " + videoGames.get(i).getNome() + ", preço: " + videoGames.get(i).getPreco()
-					+ ", quantidade: " + videoGames.get(i).getQtd() + " em estoque.");
+		if (videoGames.size() > 0) {
+			for (int i = 0; i < videoGames.size(); i++) {
+				System.out.println("Titulo: " + videoGames.get(i).getNome() + ", preço: " + videoGames.get(i).getPreco()
+						+ ", quantidade: " + videoGames.get(i).getQtd() + " em estoque.");
+			}
+
+		} else {
+			System.out.println("A loja não tem video-games no seu estoque.");
 		}
 	}
 
@@ -72,11 +82,11 @@ public class Loja {
 			x += livros.get(i).getPreco() * livros.get(i).getQtd();
 		}
 		for (int i = 0; i < videoGames.size(); ++i) {
-			y += videoGames.get(i).getPreco() * videoGames.get(i).getQtd();			
+			y += videoGames.get(i).getPreco() * videoGames.get(i).getQtd();
 		}
-		
-		System.out.println("O patrimônio da loja: Americanas é de R$ " + (x+y));
-		
-		return x+y;
+
+		System.out.println("O patrimônio da loja: Americanas é de R$ " + (x + y));
+
+		return x + y;
 	}
 }
