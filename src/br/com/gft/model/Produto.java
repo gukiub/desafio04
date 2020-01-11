@@ -1,9 +1,9 @@
 package br.com.gft.model;
 
 public abstract class Produto {
-	protected String nome;
-	protected double preco;
-	protected int qtd;
+	private String nome;
+	private double preco;
+	private int qtd;
 
 	public Produto(String nome, double preco, int qtd) {
 		super();

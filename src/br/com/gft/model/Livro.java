@@ -9,17 +9,11 @@ public class Livro extends Produto implements Imposto {
 
 	public Livro(String nome, double preco, int qtd) {
 		super(nome, preco, qtd);
-		this.nome = nome;
-		this.preco = preco;
-		this.qtd = qtd;
 
 	}
 
 	public Livro(String nome, double preco, int qtd, String autor, String tema, int qtdPag) {
 		super(nome, preco, qtd);
-		this.nome = nome;
-		this.preco = preco;
-		this.qtd = qtd;
 		this.autor = autor;
 		this.tema = tema;
 		this.qtdPag = qtdPag;
@@ -56,13 +50,13 @@ public class Livro extends Produto implements Imposto {
 
 	public double calculaImposto() {
 		if (tema.equals("educativo")) {
-			System.out.println("Livro educativo não tem imposto: " + nome);
+			System.out.println("Livro educativo não tem imposto: " + getNome());
 			return 0;
 		} else {
 			double aux;
-			aux = preco * 0.10;
-			System.out.println("R$ " + aux + " de imposto sobre o livro " + nome);
-			return preco;
+			aux = getPreco() * 0.10;
+			System.out.println("R$ " + aux + " de imposto sobre o livro " + getNome());
+			return getPreco();
 		}
 	}
 

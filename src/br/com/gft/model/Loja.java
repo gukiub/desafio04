@@ -66,7 +66,7 @@ public class Loja {
 	public void listaVideoGames() {
 		if (videoGames.size() > 0) {
 			for (int i = 0; i < videoGames.size(); i++) {
-				System.out.println("Titulo: " + videoGames.get(i).getNome() + ", preço: " + videoGames.get(i).getPreco()
+				System.out.println("Video-game: " + videoGames.get(i).getModelo() + ", preço: " + videoGames.get(i).getPreco()
 						+ ", quantidade: " + videoGames.get(i).getQtd() + " em estoque.");
 			}
 
